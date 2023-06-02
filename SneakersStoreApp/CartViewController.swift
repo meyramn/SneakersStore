@@ -21,6 +21,8 @@ class CartViewController: UIViewController, UICollectionViewDataSource, UICollec
         setupConfirmButton()
     }
     
+    //TODO: refactor code 
+    
     func setupNavBar() {
         title = "Cart"
         navigationController?.navigationBar.prefersLargeTitles = false
