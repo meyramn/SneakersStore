@@ -64,9 +64,14 @@
 		CE2F701A2A2A4EC800D846BF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F701C2A2A4F4300D846BF /* Onboarding */,
+				CE2F70272A2CF0B800D846BF /* WelcomePage */,
+				CE2F70282A2CF0EA00D846BF /* Registration */,
+				CE2F70292A2CF0F600D846BF /* Authorization */,
+				CE2F702B2A2CF10F00D846BF /* Profile */,
+				CE2F702A2A2CF10200D846BF /* Cart */,
 				CE2F70262A2A53C200D846BF /* TabBar */,
 				CE2F701D2A2A4F8600D846BF /* Catalog */,
-				CE2F701C2A2A4F4300D846BF /* Onboarding */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -132,8 +137,145 @@
 		CE2F70262A2A53C200D846BF /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CEC089272A27D3F8007BDF4C /* TabbarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE2F70272A2CF0B800D846BF /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0891D2A25CDC5007BDF4C /* WelcomePageViewController.swift */,
+			);
+			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		CE2F70282A2CF0EA00D846BF /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70382A2CF20F00D846BF /* ViewModel */,
+				CE2F70372A2CF20900D846BF /* Model */,
+				CE2F70362A2CF20300D846BF /* View */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		CE2F70292A2CF0F600D846BF /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70352A2CF1F700D846BF /* ViewModel */,
+				CE2F70342A2CF1F100D846BF /* Model */,
+				CE2F70322A2CF1E000D846BF /* View */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		CE2F702A2A2CF10200D846BF /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70312A2CF1D100D846BF /* ViewModel */,
+				CE2F70302A2CF1CB00D846BF /* Model */,
+				CE2F702F2A2CF1B800D846BF /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		CE2F702B2A2CF10F00D846BF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F702E2A2CF19800D846BF /* ViewModel */,
+				CE2F702D2A2CF19300D846BF /* Model */,
+				CE2F702C2A2CF18A00D846BF /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE2F702C2A2CF18A00D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0892B2A28303A007BDF4C /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F702D2A2CF19300D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F702E2A2CF19800D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE2F702F2A2CF1B800D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC089292A2822D9007BDF4C /* CartViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F70302A2CF1CB00D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F70312A2CF1D100D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE2F70322A2CF1E000D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC089232A260BCA007BDF4C /* AuthorizationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F70342A2CF1F100D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F70352A2CF1F700D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE2F70362A2CF20300D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0891F2A25E866007BDF4C /* RegistrationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F70372A2CF20900D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F70382A2CF20F00D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CEC088FB2A248B36007BDF4C = {
@@ -159,13 +301,7 @@
 				CE2F701A2A2A4EC800D846BF /* Scenes */,
 				CEC089072A248B37007BDF4C /* AppDelegate.swift */,
 				CEC0890B2A248B37007BDF4C /* ViewController.swift */,
-				CEC0891D2A25CDC5007BDF4C /* WelcomePageViewController.swift */,
-				CEC0891F2A25E866007BDF4C /* RegistrationViewController.swift */,
-				CEC089232A260BCA007BDF4C /* AuthorizationViewController.swift */,
-				CEC089292A2822D9007BDF4C /* CartViewController.swift */,
-				CEC0892B2A28303A007BDF4C /* ProfileViewController.swift */,
 				CE2F70122A2A250A00D846BF /* CustomTableViewCell.swift */,
-				CEC089272A27D3F8007BDF4C /* TabbarController.swift */,
 				CEC0890D2A248B37007BDF4C /* Main.storyboard */,
 				CEC089102A248B39007BDF4C /* Assets.xcassets */,
 				CEC089122A248B39007BDF4C /* LaunchScreen.storyboard */,

@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = TabbarController()//UINavigationController(rootViewController: RegistrationViewController())
+        window?.rootViewController = AuthorizationViewController()//UINavigationController(rootViewController: RegistrationViewController())
         //window?.rootViewController = rootViewController
         
         return true

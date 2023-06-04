@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class RegistrationViewController: UIViewController {
+   
     lazy var topLabel: UILabel = {
         let topLabel = UILabel(frame: CGRect(x: 130, y: 56, width: 130, height: 22)) // manual layout - use autolayout
         topLabel.text = "New User"
