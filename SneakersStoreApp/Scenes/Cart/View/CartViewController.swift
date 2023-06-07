@@ -8,46 +8,60 @@
 import UIKit
 
 class CartViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
-   
+    
     let cartProducts = ["Dolce", "Off-white", "Nike brown", "Nike gray", "NewBalance"]
     var cartCollectionView: UICollectionView!
+    //    lazy var cartCollectionView: UICollectionView = {
+    //
+    //        let layout = UICollectionViewFlowLayout()
+    //        var collectionView = UICollectionView()
+    //
+    //        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout) // it was frame: .zero - from tutorial or CGRect(x: 0, y: 0, width: 4, height: 0)
+    //
+    //        collectionView.dataSource = self
+    //        collectionView.delegate = self
+    //
+    //        collectionView.register(CustomCartCell.self, forCellWithReuseIdentifier: "cell")
+    //        return collectionView
+    //    }()
+    
+    lazy var confirmButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Confirm Order", for: .normal)
+        button.backgroundColor = .black
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        button.layer.cornerRadius = 28
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "TxtFieldBackgroundColor")
         setupNavBar()
-//        setupCartLabel()
+        setupUI()
         setupCartCollectionView()
-        setupConfirmButton()
     }
     
-    //TODO: refactor code 
+    //TODO: refactor code
     
     func setupNavBar() {
         title = "Cart"
         navigationController?.navigationBar.prefersLargeTitles = false
     }
     
-    func setupCartLabel() {
-        let topLabel = UILabel(frame: CGRect(x: 177, y: 56, width: 36, height: 22))
-        topLabel.text = "Cart"
-        topLabel.textAlignment = .center
-        topLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        topLabel.textColor = .black
-        view.addSubview(topLabel)
-    }
-    
-    func setupConfirmButton() {
-        let confirmButton = UIButton(frame: CGRect(x: 15, y: 693, width: 358, height: 54))
-        confirmButton.setTitle("Confirm Order", for: .normal)
-        confirmButton.backgroundColor = .black
-        confirmButton.setTitleColor(.white, for: .normal)
-        confirmButton.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        confirmButton.layer.cornerRadius = 28
-        //confirmButton.addTarget(self, action: #selector(signInButtonPressed), for: .touchUpInside)
+    func setupUI() {
         
         view.addSubview(confirmButton)
+        confirmButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            confirmButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            confirmButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            confirmButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -13),
+            confirmButton.heightAnchor.constraint(equalToConstant: 54)
+        ])
     }
+    
     
     func setupCartCollectionView() {
         
@@ -67,12 +81,12 @@ class CartViewController: UIViewController, UICollectionViewDataSource, UICollec
     func setupCartCellConstraints() {
         cartCollectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            cartCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            cartCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 104),
             cartCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             cartCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             cartCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
         ])
-    
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

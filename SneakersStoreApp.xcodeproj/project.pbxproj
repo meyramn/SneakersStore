@@ -11,6 +11,7 @@
 		CE2F70192A2A42EC00D846BF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2F70182A2A42EC00D846BF /* SnapKit */; };
 		CE2F701F2A2A4FEC00D846BF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F701E2A2A4FEC00D846BF /* Product.swift */; };
 		CE2F70212A2A50C500D846BF /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F70202A2A50C500D846BF /* CatalogViewModel.swift */; };
+		CE5140692A2D410600F1371A /* Onboarding + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5140682A2D410600F1371A /* Onboarding + Extension.swift */; };
 		CEC089082A248B37007BDF4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC089072A248B37007BDF4C /* AppDelegate.swift */; };
 		CEC0890C2A248B37007BDF4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0890B2A248B37007BDF4C /* ViewController.swift */; };
 		CEC0890F2A248B37007BDF4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC0890D2A248B37007BDF4C /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		CE2F70122A2A250A00D846BF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE2F701E2A2A4FEC00D846BF /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CE2F70202A2A50C500D846BF /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		CE5140682A2D410600F1371A /* Onboarding + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding + Extension.swift"; sourceTree = "<group>"; };
 		CEC089042A248B37007BDF4C /* SneakersStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakersStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC089072A248B37007BDF4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC0890B2A248B37007BDF4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC089212A260A5B007BDF4C /* UITextField+Extension.swift */,
+				CE5140682A2D410600F1371A /* Onboarding + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				CEC0890C2A248B37007BDF4C /* ViewController.swift in Sources */,
 				CEC089222A260A5B007BDF4C /* UITextField+Extension.swift in Sources */,
 				CEC0891C2A248C51007BDF4C /* OnboardingViewController.swift in Sources */,
+				CE5140692A2D410600F1371A /* Onboarding + Extension.swift in Sources */,
 				CE2F70212A2A50C500D846BF /* CatalogViewModel.swift in Sources */,
 				CE2F70132A2A250A00D846BF /* CustomTableViewCell.swift in Sources */,
 				CEC0892C2A28303A007BDF4C /* ProfileViewController.swift in Sources */,

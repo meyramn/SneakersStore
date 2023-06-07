@@ -17,19 +17,15 @@ class CatalogViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "TxtFieldBackgroundColor")
-        setupCatalogTopLabel()
+        setupNavBar()
         setupCatalogCollectionView()
         let products = viewModel.getProducts()
         
     }
     
-    func setupCatalogTopLabel() {
-        let topLabel = UILabel(frame: CGRect(x: 114, y: 56, width: 161, height: 22))
-        topLabel.text = "Hello, Sneakerhead!"
-        topLabel.textColor = .black
-        topLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-        
-        view.addSubview(topLabel)
+    func setupNavBar() {
+        title = "Catalog"
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     func setupCatalogCollectionView() {

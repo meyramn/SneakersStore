@@ -10,16 +10,6 @@ import SnapKit
 
 class RegistrationViewController: UIViewController {
    
-    lazy var topLabel: UILabel = {
-        let topLabel = UILabel(frame: CGRect(x: 130, y: 56, width: 130, height: 22)) // manual layout - use autolayout
-        topLabel.text = "New User"
-        topLabel.font = UIFont.systemFont(ofSize: 17, weight: .semibold) // check on figma
-        topLabel.textAlignment = .center
-        topLabel.textColor = .black
-        return topLabel
-    }()
-    
-    
     lazy var usernameField: UITextField = {
         let field = UITextField(frame: CGRect(x: 16, y: 140, width: 358, height: 48))
         field.placeholder = "Username"
@@ -68,10 +58,30 @@ class RegistrationViewController: UIViewController {
     
     func setupUI() {
         // NSLayoutConstraints for every UI element
-        view.addSubview(topLabel)
+        
         view.addSubview(usernameField)
+        usernameField.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(48)
+            make.top.equalToSuperview().offset(140)
+        }
+        
         view.addSubview(passwordField)
+        passwordField.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(48)
+            make.top.equalToSuperview().offset(204)
+        }
+        
         view.addSubview(repeatedPasswordField)
+        repeatedPasswordField.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(48)
+            make.top.equalToSuperview().offset(268)
+        }
         
         view.addSubview(signUpButton)
         signUpButton.snp.makeConstraints { make in
