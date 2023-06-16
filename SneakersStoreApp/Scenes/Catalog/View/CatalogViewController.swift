@@ -19,7 +19,7 @@ class CatalogViewController: UIViewController, UICollectionViewDataSource, UICol
         view.backgroundColor = UIColor(named: "TxtFieldBackgroundColor")
         setupNavBar()
         setupCatalogCollectionView()
-        let products = viewModel.getProducts()
+        //let products = viewModel.getProducts()
         
     }
     
@@ -31,23 +31,19 @@ class CatalogViewController: UIViewController, UICollectionViewDataSource, UICol
     func setupCatalogCollectionView() {
         
         let collectionViewLayout = UICollectionViewFlowLayout()
-        
-        //Spacing between cells does not work!!!
-//        collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
-//        collectionViewLayout.minimumLineSpacing = 16
-//        collectionViewLayout.minimumInteritemSpacing = 10
-//        self.collectionView?.collectionViewLayout = collectionViewLayout
-        
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 4, height: 0), collectionViewLayout: collectionViewLayout) // it was frame: .zero - from tutorial
+       
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout) // it was frame: .zero - from tutorial
         view.addSubview(collectionView)
         
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        
         collectionView.register(CustomCatalogCell.self, forCellWithReuseIdentifier: "cell") // xui znaet chto eto
         
         setupCVContstraints()
     }
+    
     
     // here u put your constraints
     func setupCVContstraints() {
@@ -56,13 +52,14 @@ class CatalogViewController: UIViewController, UICollectionViewDataSource, UICol
             collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 98),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16)
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
         ])
     }
     // number of cells on screen
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productCards.count
     }
+    
     
     // cell instance and etc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,15 +90,18 @@ class CatalogViewController: UIViewController, UICollectionViewDataSource, UICol
 }
 
 class CustomCatalogCell: UICollectionViewCell {
+    let container = UIView()
     let productImageView = UIImageView()
     let productNameLabel = UILabel()
     let addToCartButton = UIButton(type: .system)
     
     override init(frame: CGRect) {
         super .init(frame: frame)
+        addSubview(container)
         addSubview(productImageView)
         addSubview(productNameLabel)
         addSubview(addToCartButton)
+        
         
         productImageView.translatesAutoresizingMaskIntoConstraints = false
         productNameLabel.translatesAutoresizingMaskIntoConstraints = false

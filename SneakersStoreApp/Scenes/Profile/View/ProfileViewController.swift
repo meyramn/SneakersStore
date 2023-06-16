@@ -35,8 +35,15 @@ class ProfileViewController: UIViewController {
     private let profileTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .systemBackground
-        tableView.allowsSelection = true
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        tableView.separatorStyle = .none
+        tableView.register(ProfileTableViewCell.self, forCellReuseIdentifier: ProfileTableViewCell.identifier)
+        return tableView
+    }()
+    
+    private let extraLinksTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .systemBackground
+        tableView.register(ExtraLinksTableViewCell.self, forCellReuseIdentifier: ExtraLinksTableViewCell.identifier)
         return tableView
     }()
     
@@ -60,16 +67,17 @@ class ProfileViewController: UIViewController {
         profileTableView.delegate = self
         profileTableView.dataSource = self
         
-        profileTableView.translatesAutoresizingMaskIntoConstraints = false
+        profileTableView.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-458)
+            make.top.equalToSuperview().offset(114)
+        }
         
-        NSLayoutConstraint.activate([
-            profileTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            profileTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            profileTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -458),
-            profileTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 114)
-        ])
     }
 }
+
+//TODO: Add extra links tableView
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -78,22 +86,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else {
-            fatalError("TableView could not dequeue a CustomCell in ProfileViewController")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileTableViewCell.identifier, for: indexPath) as? ProfileTableViewCell else {
+            fatalError("TableView could not dequeue a ProfileTableViewCell in ProfileViewController")
         }
         
         cell.textLabel?.text = listOfItems[indexPath.row]
         
         
-        
         return cell
     }
     
-    //Spacing and height
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let cellSpacing = CGFloat(16)
-//        let cellHeight = CGFloat(52)
-//
-//        return cellSpacing + cellHeight
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 68
+    }
 }

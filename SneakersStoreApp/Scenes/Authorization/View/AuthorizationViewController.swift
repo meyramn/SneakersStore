@@ -44,6 +44,12 @@ class AuthorizationViewController: UIViewController {
         
         view.backgroundColor = .white
         setupUI()
+        setupNavBar()
+    }
+    
+    func setupNavBar() {
+        title = "Welcome back!"
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     func setupUI() {
@@ -76,6 +82,8 @@ class AuthorizationViewController: UIViewController {
     }
     
     @objc func signInButtonPressed() {
-        return
+        let signedIn = TabbarController()
+        signedIn.modalPresentationStyle = .fullScreen
+        present(signedIn, animated: true)
     }
 }

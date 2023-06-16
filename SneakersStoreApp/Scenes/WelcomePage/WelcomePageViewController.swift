@@ -93,12 +93,15 @@ class WelcomePageViewController: UIViewController {
     }
 
     @objc func signUpButtonPressed() {
-        
-        return
+        print("NavigationController is", navigationController)
+        navigationController?.pushViewController(RegistrationViewController(), animated: true)
     }
     
     @objc func haveAnAccountButtonPressed() {
-        return
+        navigationController?.pushViewController(AuthorizationViewController(), animated: true)
     }
+    
 }
+
+
 

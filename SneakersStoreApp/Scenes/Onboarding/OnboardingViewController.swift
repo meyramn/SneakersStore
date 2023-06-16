@@ -147,11 +147,19 @@ extension UIPageViewController {
 }
 
 //Handle button logic
+//TODO: Make navigation when last nextTapped to push on welcomepage
 extension OnboardingViewController {
     
     @objc func nextTapped(_ sender: UIButton) {
-        pageControl.currentPage += 1
-        goToNextPage()
+        if pageControl.currentPage < pages.count - 1 {
+            pageControl.currentPage += 1
+            goToNextPage()
+        } else if pageControl.currentPage == pages.count - 1 {
+    
+            let welcomePage = UINavigationController(rootViewController: WelcomePageViewController())
+            welcomePage.modalPresentationStyle = .fullScreen
+            present(welcomePage, animated: true, completion: nil)
+        }
     }
 }
 
@@ -186,7 +194,7 @@ class DemoViewController: UIViewController {
 extension DemoViewController {
     
     func style() {
-   
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
         
@@ -213,7 +221,7 @@ extension DemoViewController {
         
         container.contentView.addSubview(titleLabel)
         container.contentView.addSubview(subtitleLabel)
-
+        
         
         view.addSubview(imageView)
         imageView.addSubview(container)
