@@ -11,6 +11,13 @@
 		CE2F70192A2A42EC00D846BF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE2F70182A2A42EC00D846BF /* SnapKit */; };
 		CE2F701F2A2A4FEC00D846BF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F701E2A2A4FEC00D846BF /* Product.swift */; };
 		CE2F70212A2A50C500D846BF /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F70202A2A50C500D846BF /* CatalogViewModel.swift */; };
+		CE5140692A2D410600F1371A /* Onboarding + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5140682A2D410600F1371A /* Onboarding + Extension.swift */; };
+		CE51406B2A3380FB00F1371A /* AccountInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51406A2A3380FB00F1371A /* AccountInfoController.swift */; };
+		CE51406D2A33865300F1371A /* OrderHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE51406C2A33865300F1371A /* OrderHistoryController.swift */; };
+		CE5140732A339F4400F1371A /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5140722A339F4400F1371A /* OrderModel.swift */; };
+		CE8DB9682A39D437003C8B5A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DB9672A39D437003C8B5A /* ProfileTableViewCell.swift */; };
+		CE8DB96B2A39E2C5003C8B5A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8DB96A2A39E2C5003C8B5A /* ProfileModel.swift */; };
+		CE9EB9FA2A3CAB7200D0F332 /* ExtraLinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9EB9F92A3CAB7200D0F332 /* ExtraLinksTableViewCell.swift */; };
 		CEC089082A248B37007BDF4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC089072A248B37007BDF4C /* AppDelegate.swift */; };
 		CEC0890C2A248B37007BDF4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0890B2A248B37007BDF4C /* ViewController.swift */; };
 		CEC0890F2A248B37007BDF4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC0890D2A248B37007BDF4C /* Main.storyboard */; };
@@ -31,6 +38,13 @@
 		CE2F70122A2A250A00D846BF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE2F701E2A2A4FEC00D846BF /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CE2F70202A2A50C500D846BF /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		CE5140682A2D410600F1371A /* Onboarding + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding + Extension.swift"; sourceTree = "<group>"; };
+		CE51406A2A3380FB00F1371A /* AccountInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoController.swift; sourceTree = "<group>"; };
+		CE51406C2A33865300F1371A /* OrderHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryController.swift; sourceTree = "<group>"; };
+		CE5140722A339F4400F1371A /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		CE8DB9672A39D437003C8B5A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		CE8DB96A2A39E2C5003C8B5A /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		CE9EB9F92A3CAB7200D0F332 /* ExtraLinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLinksTableViewCell.swift; sourceTree = "<group>"; };
 		CEC089042A248B37007BDF4C /* SneakersStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakersStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC089072A248B37007BDF4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC0890B2A248B37007BDF4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +78,15 @@
 		CE2F701A2A2A4EC800D846BF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE51406E2A339F1000F1371A /* Order History */,
+				CE2F701C2A2A4F4300D846BF /* Onboarding */,
+				CE2F70272A2CF0B800D846BF /* WelcomePage */,
+				CE2F70282A2CF0EA00D846BF /* Registration */,
+				CE2F70292A2CF0F600D846BF /* Authorization */,
+				CE2F702B2A2CF10F00D846BF /* Profile */,
+				CE2F702A2A2CF10200D846BF /* Cart */,
 				CE2F70262A2A53C200D846BF /* TabBar */,
 				CE2F701D2A2A4F8600D846BF /* Catalog */,
-				CE2F701C2A2A4F4300D846BF /* Onboarding */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -75,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC089212A260A5B007BDF4C /* UITextField+Extension.swift */,
+				CE5140682A2D410600F1371A /* Onboarding + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -132,8 +153,191 @@
 		CE2F70262A2A53C200D846BF /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				CEC089272A27D3F8007BDF4C /* TabbarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE2F70272A2CF0B800D846BF /* WelcomePage */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0891D2A25CDC5007BDF4C /* WelcomePageViewController.swift */,
+			);
+			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		CE2F70282A2CF0EA00D846BF /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70382A2CF20F00D846BF /* ViewModel */,
+				CE2F70372A2CF20900D846BF /* Model */,
+				CE2F70362A2CF20300D846BF /* View */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		CE2F70292A2CF0F600D846BF /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70352A2CF1F700D846BF /* ViewModel */,
+				CE2F70342A2CF1F100D846BF /* Model */,
+				CE2F70322A2CF1E000D846BF /* View */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		CE2F702A2A2CF10200D846BF /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70312A2CF1D100D846BF /* ViewModel */,
+				CE2F70302A2CF1CB00D846BF /* Model */,
+				CE2F702F2A2CF1B800D846BF /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		CE2F702B2A2CF10F00D846BF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DB9692A39D442003C8B5A /* Cell */,
+				CE2F702E2A2CF19800D846BF /* ViewModel */,
+				CE2F702D2A2CF19300D846BF /* Model */,
+				CE2F702C2A2CF18A00D846BF /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE2F702C2A2CF18A00D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0892B2A28303A007BDF4C /* ProfileViewController.swift */,
+				CE51406A2A3380FB00F1371A /* AccountInfoController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F702D2A2CF19300D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DB96A2A39E2C5003C8B5A /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F702E2A2CF19800D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE2F702F2A2CF1B800D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC089292A2822D9007BDF4C /* CartViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F70302A2CF1CB00D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F70312A2CF1D100D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE2F70322A2CF1E000D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC089232A260BCA007BDF4C /* AuthorizationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F70342A2CF1F100D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F70352A2CF1F700D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE2F70362A2CF20300D846BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0891F2A25E866007BDF4C /* RegistrationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE2F70372A2CF20900D846BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE2F70382A2CF20F00D846BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE51406E2A339F1000F1371A /* Order History */ = {
+			isa = PBXGroup;
+			children = (
+				CE5140742A33A01F00F1371A /* Cell */,
+				CE5140702A339F2D00F1371A /* Model */,
+				CE51406F2A339F2100F1371A /* View */,
+			);
+			path = "Order History";
+			sourceTree = "<group>";
+		};
+		CE51406F2A339F2100F1371A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE51406C2A33865300F1371A /* OrderHistoryController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE5140702A339F2D00F1371A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE5140722A339F4400F1371A /* OrderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE5140742A33A01F00F1371A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F70122A2A250A00D846BF /* CustomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE8DB9692A39D442003C8B5A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE8DB9672A39D437003C8B5A /* ProfileTableViewCell.swift */,
+				CE9EB9F92A3CAB7200D0F332 /* ExtraLinksTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CEC088FB2A248B36007BDF4C = {
@@ -159,13 +363,6 @@
 				CE2F701A2A2A4EC800D846BF /* Scenes */,
 				CEC089072A248B37007BDF4C /* AppDelegate.swift */,
 				CEC0890B2A248B37007BDF4C /* ViewController.swift */,
-				CEC0891D2A25CDC5007BDF4C /* WelcomePageViewController.swift */,
-				CEC0891F2A25E866007BDF4C /* RegistrationViewController.swift */,
-				CEC089232A260BCA007BDF4C /* AuthorizationViewController.swift */,
-				CEC089292A2822D9007BDF4C /* CartViewController.swift */,
-				CEC0892B2A28303A007BDF4C /* ProfileViewController.swift */,
-				CE2F70122A2A250A00D846BF /* CustomTableViewCell.swift */,
-				CEC089272A27D3F8007BDF4C /* TabbarController.swift */,
 				CEC0890D2A248B37007BDF4C /* Main.storyboard */,
 				CEC089102A248B39007BDF4C /* Assets.xcassets */,
 				CEC089122A248B39007BDF4C /* LaunchScreen.storyboard */,
@@ -251,16 +448,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE51406B2A3380FB00F1371A /* AccountInfoController.swift in Sources */,
 				CEC089262A27D282007BDF4C /* CatalogViewController.swift in Sources */,
 				CEC089242A260BCB007BDF4C /* AuthorizationViewController.swift in Sources */,
 				CEC0892A2A2822D9007BDF4C /* CartViewController.swift in Sources */,
 				CEC0890C2A248B37007BDF4C /* ViewController.swift in Sources */,
+				CE51406D2A33865300F1371A /* OrderHistoryController.swift in Sources */,
 				CEC089222A260A5B007BDF4C /* UITextField+Extension.swift in Sources */,
+				CE9EB9FA2A3CAB7200D0F332 /* ExtraLinksTableViewCell.swift in Sources */,
+				CE8DB9682A39D437003C8B5A /* ProfileTableViewCell.swift in Sources */,
 				CEC0891C2A248C51007BDF4C /* OnboardingViewController.swift in Sources */,
+				CE5140692A2D410600F1371A /* Onboarding + Extension.swift in Sources */,
 				CE2F70212A2A50C500D846BF /* CatalogViewModel.swift in Sources */,
+				CE5140732A339F4400F1371A /* OrderModel.swift in Sources */,
 				CE2F70132A2A250A00D846BF /* CustomTableViewCell.swift in Sources */,
 				CEC0892C2A28303A007BDF4C /* ProfileViewController.swift in Sources */,
 				CEC0891E2A25CDC5007BDF4C /* WelcomePageViewController.swift in Sources */,
+				CE8DB96B2A39E2C5003C8B5A /* ProfileModel.swift in Sources */,
 				CEC089082A248B37007BDF4C /* AppDelegate.swift in Sources */,
 				CEC089282A27D3F8007BDF4C /* TabbarController.swift in Sources */,
 				CEC089202A25E866007BDF4C /* RegistrationViewController.swift in Sources */,
